@@ -1,8 +1,4 @@
-/*
-  |========================
-  | Main settings 
-  |========================
-*/
+/* Main settings */
 :root {
   --main-bg-color: #ffffff;
   --main-text-color: #434455;
@@ -10,6 +6,9 @@
   --logo-color: #4d5ae5;
   --secondary-bg-color: #f4f4fd;
   --icons-color: #8e8f99;
+  --vertical: 24px;
+  --horisontal: 72px;
+  --item: 1;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -21,6 +20,8 @@ body {
 }
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .contacts {
   font-style: normal;
@@ -37,21 +38,45 @@ ul {
 }
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
-.container {
-  max-width: 1158px;
-  margin: 0 auto;
-  padding: 0 15px;
+
+.section {
+  padding: 96px 0;
 }
+@media only screen and (min-width: 1158px) {
+  .section {
+    padding: 120px 0;
+  }
+}
+.container {
+  min-width: 320px;
+  max-width: 428px;
+  padding: 0 16px;
+  margin: 0 auto;
 
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+/* Tablet screen >=768px */
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 736px;
+  }
+}
+/* Desktop screen >=1158px */
+@media only screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
+}
+  
+  
+  
 
-/*
-   |========================
-   | Header Studio
-   |========================
- */
+/* Header Studio */
 .header {
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
@@ -192,9 +217,6 @@ img {
    | Features section 
    |========================
  */
-.features {
-  padding: 120px 0;
-}
 .features-title {
   position: absolute;
   width: 1px;
@@ -245,9 +267,9 @@ img {
    | What are we doing
    |========================
  */
-.what-are-we-doing-section {
+/* .what-are-we-doing-section {
   padding-bottom: 120px;
-}
+} */
 .title {
   font-weight: 700;
   font-size: 36px;
@@ -273,33 +295,67 @@ img {
  */
 .our-team-section {
   background-color: #f4f4fd;
-  padding: 120px 0;
 }
 .our-team-title {
   font-weight: 700;
   font-size: 36px;
-  line-height: 40px;
+  line-height: 1.11;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: #2e2f42;
   margin-bottom: 72px;
 }
+
 .our-team-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  row-gap: var(--horisontal);
+  column-gap: var(--vertical);
+
 }
+@media only screen and (min-width: 768px) {
+  .our-team-list {
+    --item: 2;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .our-team-list {
+    --item: 4;
+  }
+}
+
 .our-team-list-item {
   background-color: #ffffff;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
-  flex-basis: calc((100% - 3 * 24px) / 4);
+  flex-basis: calc((100% - var(--vertical) * (var(--item) - 1)) / var(--item));
 }
+
+@media only screen and (min-width: 768px) {
+  .our-team-list-item {
+    flex-basis: calc((100% - var(--vertical) * (var(--item) - 1)) / var(--item));
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .our-team-list-item {
+    flex-basis: calc((100% - var(--vertical) * (var(--item) - 1)) / var(--item));
+  }
+}
+
 .our-team-desc-container {
   padding: 32px 0;
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .our-team-desc-container {
+    max-width: 582px;
+  }
+}
+
 .our-team-names {
   font-weight: 500;
   font-size: 20px;
@@ -308,6 +364,7 @@ img {
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
+
 }
 .our-team-job {
   font-weight: 400;
@@ -345,9 +402,6 @@ img {
    | Customers
    |========================
  */
-.customers-section {
-  padding: 120px 0;
-}
 .customer-title {
   margin-bottom: 72px;
 }
@@ -834,7 +888,7 @@ img {
   min-width: 169px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   color: #ffffff;
   border: none;
