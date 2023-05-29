@@ -261,7 +261,6 @@ img {
   justify-content: center;
 }
 .features-list-title {
-  text-align: center;
   text-transform: capitalize;
   font-weight: 700;
   font-size: 36px;
@@ -271,9 +270,9 @@ img {
   color: #2e2f42;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 767px) {
   .features-list-title {
-    text-align: left;
+    text-align: center;
   }
 }
 
@@ -282,7 +281,6 @@ img {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-    text-align: left;
   }
 }
 
