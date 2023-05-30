@@ -38,7 +38,7 @@ ul {
 }
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -56,8 +56,8 @@ img {
   padding: 0 16px;
   margin: 0 auto;
 
-  outline: 2px solid red;
-  outline-offset: -2px;
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
 }
 /* Tablet screen >=768px */
 @media only screen and (min-width: 768px) {
@@ -218,6 +218,12 @@ img {
   }
 } */
 
+@media only screen and (min-width: 320px) and (max-width: 428px) {
+  .hero-container {
+    padding: 0 0;
+  }
+}
+
 .hero {
  height: 432px;
 }
@@ -312,11 +318,12 @@ img {
   text-align: center;
   letter-spacing: 0.02em;
   color: #ffffff;
-  max-width: 496px;
+  width: 320px;
   margin: 0 auto;
   margin-bottom: 72px;
   text-transform: capitalize;
 }
+
 
 @media only screen and (min-width: 768px) {
   .hero-title {
@@ -324,6 +331,7 @@ img {
     line-height: 1.07;
     margin-bottom: 36px;
     text-transform: none;
+    width: 496px;
   }
 }
 
@@ -361,6 +369,8 @@ img {
    | Features section 
    |========================
  */
+
+
 .features-title {
   position: absolute;
   width: 1px;
@@ -453,11 +463,17 @@ img {
    | What are we doing
    |========================
  */
+
+ .work-section {
+  padding-top: 0;
+ }
+
 @media only screen and (max-width: 1157px) {
   .work-section {
     display: none;
   }
 }
+
 .title {
   font-weight: 700;
   font-size: 36px;
@@ -655,14 +671,13 @@ img {
 
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
   .footer-container {
-        max-width: 537px;
+    max-width: 584px;
     margin-left: auto;
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
     align-items: baseline;
     column-gap: 24px;
-    /* text-align: center; */
   }
 }
 
@@ -1298,7 +1313,7 @@ img {
 
   width: 100vw;
   height: 100vh;
-  padding: 40px;
+  padding-left: 40px;
   padding-top: 80px;
   background-color: #ffffff;
   z-index: 999;
@@ -1378,4 +1393,10 @@ color: var(--main-text-color);
 .mobile-socials {
   justify-content: flex-start;
   gap: 54px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 360px) {
+  .mobile-socials {
+    gap: 38px;
+  }
 }
