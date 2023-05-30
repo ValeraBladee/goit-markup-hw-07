@@ -23,7 +23,7 @@
 
   <body>
     <!-- Header  -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="header-container container">
         <nav class="header-nav">
           <a class="logo link" href="./index.html"
@@ -58,19 +58,28 @@
             </li>
           </ul>
         </address>
+        <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg width="32" height="22">
+              <use href="./images/icons.svg#burger-menu"></use>
+            </svg>
+          </button>
       </div>
-    </header> -->
+    </header>
     <!-- Main  -->
     <main>
       <!-- Hero section  -->
-      <!-- <section class="hero section">
+      <section class="hero hero-overlay section">
         <div class="hero-container container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button class="btn" type="button" data-modal-open>
             Order Service
           </button>
         </div>
-      </section> -->
+      </section>
       <!-- Features Section -->
       <section class="section">
         <div class="features-container container">
@@ -135,7 +144,7 @@
             <li class="what-are-we-doing-item">
               <img
                 class="what-are-we-doing-examples"
-                src="./images/computer.jpg"
+                src="./images/section-2/computer.jpg"
                 alt="Our work"
                 width="360"
                 height="300"
@@ -144,7 +153,7 @@
             <li class="what-are-we-doing-item">
               <img
                 class="what-are-we-doing-examples"
-                src="./images/phones.jpg"
+                src="./images/section-2/phones.jpg"
                 alt="Our Work"
                 width="360"
                 height="300"
@@ -153,7 +162,7 @@
             <li class="what-are-we-doing-item">
               <img
                 class="what-are-we-doing-examples"
-                src="./images/phone.jpg"
+                src="./images/section-2/phone.jpg"
                 alt="Our Work"
                 width="360"
                 height="300"
@@ -170,7 +179,7 @@
             <li class="our-team-list-item">
               <img
                 class="our-team-img"
-                src="./images/img-1.jpg"
+                src="./images/team/mark.jpg"
                 alt="Mark Guerrero"
                 width="264"
                 height="260"
@@ -213,7 +222,7 @@
             <li class="our-team-list-item">
               <img
                 class="our-team-img"
-                src="./images/img-2.jpg"
+                src="./images/team/tom.jpg"
                 alt="Tom Ford"
                 width="264"
                 height="260"
@@ -256,7 +265,7 @@
             <li class="our-team-list-item">
               <img
                 class="our-team-img"
-                src="./images/img-3.jpg"
+                src="./images/team/camila.jpg"
                 alt="Camila Garcia"
                 width="264"
                 height="260"
@@ -299,7 +308,7 @@
             <li class="our-team-list-item">
               <img
                 class="our-team-img"
-                src="./images/img-4.jpg"
+                src="./images/team/daniel.jpg"
                 alt="Daniel Wilson"
                 width="264"
                 height="260"
@@ -514,7 +523,40 @@
         </form>
       </div>
     </div>
+    <!-- Mobile-menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li><a href="" class="link">About</a></li>
+        <li><a href="" class="link">Products</a></li>
+        <li><a href="" class="link">Contacts</a></li>
+        <li><a href="" class="link">Career</a></li>
+      </ul>
+    </div>
     <!-- Java script  -->
-    <script src="./js/modal.js"></script>
+    <script src="./js/modal.js/modal.js"></script>
+    <!-- Mobile scripts -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
